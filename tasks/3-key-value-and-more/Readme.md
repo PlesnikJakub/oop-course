@@ -9,6 +9,7 @@ https://homel.vsb.cz/~kud007/lectures/oop_01.pdf
 
 ## PART 2
 definute následující třídy a vytvořte několik instancí
+- mimo datové položky implementujte i konstruktory a gettery/settery
 
 Person
 - string firstname
