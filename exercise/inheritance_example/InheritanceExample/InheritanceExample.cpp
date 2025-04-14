@@ -26,22 +26,25 @@ int main()
     }
 
     std::cout << video->GetViews() << std::endl;
+
     //// 
 
-    Content* content = video;
-    content->GetName();
+    video->GetViews(); // child method
+    Content* content = video; // assign child objec to parent 
 
-    //
-    vector<Content*> allcontent;
+    // polymorp data structure
+    vector<Content*> allcontent; // 
 
     allcontent.push_back(c);
     allcontent.push_back(video);
-
-    /// promotions
+//  allcontent.push_back(promotion);
+//  promotions
 
     for (Content* var : allcontent)
     {
         std::cout << var->GetName() << " " << var->GetDurationInSeconds() << std::endl;
+
+        var->PrintPost();
     
         if (VideoContent* d_ptr = dynamic_cast<VideoContent*>(var)) {
             cout << "Ha this is video content" << endl;

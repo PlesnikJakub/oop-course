@@ -15,3 +15,8 @@ double Content::GetDurationInSeconds()
 {
 	return this->durationInSeconds;
 }
+
+string Content::PrintPost()
+{
+	return "test";
+}
