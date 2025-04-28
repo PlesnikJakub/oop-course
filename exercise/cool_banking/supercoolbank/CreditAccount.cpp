@@ -8,12 +8,14 @@ CreditAccount::CreditAccount(int n, Client* c, double credit = 5000) : Account(n
 
 bool CreditAccount::CanWithdraw(double a)
 {
+    // this->number; // private // error
+    // this->balance; // protected // OK
     return (this->creditAmmount + this->balance) - a >= 0;
 }
 
 bool CreditAccount::Withdraw(double a)
 {
-    cout << "CreditAccount Withdraw" << endl;
+    cout << "*** CreditAccount Withdraw" << endl;
     if (this->CanWithdraw(a)) {
         this->balance -= a;
         return true;

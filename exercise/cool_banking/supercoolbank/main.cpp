@@ -23,6 +23,8 @@ int main()
 
     /* ------------ TEST OVERRIDING -------------- */
 
+
+
     CreditAccount* creditAcc = new CreditAccount(1, john, 1000);
     cout << "Current Balance: " << creditAcc->GetBalance() << endl;
 
@@ -41,10 +43,18 @@ int main()
     cout << "Current Balance: " << creditAcc->GetBalance() << endl;
     cout << "------------" << endl;
 
+    
+
 
     cout << "Assign to variable of parent type and call method." << endl;
     Account* b = creditAcc;
+
     b->Withdraw(1000.0);
+
+    vector<Account*> allAcc;
+    allAcc.push_back(creditAcc);
+    // allAcc.push_back(partnerAcc);
+    // allAcc.push_back(anotherTypeOfAcc);
 
     return 0;
 }

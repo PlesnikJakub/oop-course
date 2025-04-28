@@ -1,0 +1,61 @@
+1. Zadání (jiné než z přednášek) si vymyslíte sami, projekt ale musí obsahovat minimálně sedm tříd.
+-  ne banka, auta, tvary
+
+2. Projekt bude obsahovat kompozice (hierarchie) objektů.
+- Objekt obsahuje jeden nebo více jiných objektů
+- Faktura obsahuje seznam produktu a zákazníka
+- Banka obsahuje účty, učty obsahují zákazníky
+
+3. Projekt bude obsahovat a používat přetížené metody.
+foo()
+foo(int a)
+foo(string a)
+foo(int a, int b)
+foo(int a, string b)
+foo(string a, int b)
+- počítá se i konstruktor
+
+4. Projekt bude obsahovat a používat třídu v roli objektu.
+použití klíčového slova static
+- třída se statickou metodou nebo vlastností
+- statická promněnná - udržuje jednu instanci ----, defaultní hodnota která se může měnit za běhu
+- statická metoda - pomocné funkce - převody, práce se stringy, formátování, matematika
+- návrhové vzory - factory method, singleton
+
+5. Projekt bude obsahovat a využívat dědičnou hierarchii obsahující alespoň tři třídy.
+- A -> B -> C
+- A -> C, B -> C - Doporučeno
+
+6. Dědičnost bude obsahovat a používat jak rozšíření (dat i metod), tak změnu chování s využitou pozdní vazbou.
+- Shadowing vs Overriding
+- Shadowing 
+	- deklarace stejné metody jakou má předek s novým chováním
+	- při přiřazení se volá metoda předka
+- Overriding
+	- metoda s klíčovým slovíčkem virtual
+
+7. Dědičná hierarchie bude obsahovat čistě abstraktní třídu.
+- třída která obsahuje použe metody bez definice (čistě virtuální metoda)
+- virtual double GetArea() = 0;
+- Printable -> virtual string PrintInfo() = 0;
+- Serializable -> virtual string Serialize() = 0;
+- Entity -> virtual string GetId() = 0;
+
+
+8. Projekt bude využívat polymorfismus (polymorfní přiřazení i polymorfní datovou strukturu).
+polymorfní přiřazení
+- Přiřazení potomka do promněné typu předka
+- Rectangle* r = new Rectangle(2, 5);
+- Shape* s = r;
+
+polymorfní datovou strukturu
+- pole nebo jiná kolekce (vector) datového typu předka
+vector<Shape*> shapes;
+    shapes.push_back(r);
+    shapes.push_back(t);
+
+9. Po spuštění projektu bude vytvořeno alespoň několik desítek objektů zahrnujících objekty všech deklarovaných tříd (s výjimkou abstraktních) a ve výpisu na konzole budou prezentovány výsledky úloh, které objekty vykonají.
+
+- Všechny třídy budou mít anglický název ve svém vlastním souboru.
+- U každé třídy je vhodné také do poznámky v kódu krátce popsat, co třída reprezentuje.
+
